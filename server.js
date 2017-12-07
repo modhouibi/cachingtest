@@ -6,6 +6,7 @@
 var express = require('express');
 var app = express();
 
+const port=process.env.PORT || 3000;
 var counter = 0
 // Change the max age - keep in mind its in seconds
 var MAX_AGE = 15
@@ -29,6 +30,6 @@ app.get('/cachetest', function (req, res) {
 });
 
 // Listen on http port
-app.listen(3000, function () {
+app.listen(port, function () {
   console.log('Example app listening on port 3000!');
 });
